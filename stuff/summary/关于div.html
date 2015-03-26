@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>网页知识重点与总结</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="summary.css">
+	<script>
+	function startTime()
+	{
+	var today=new Date()
+	var h=today.getHours()
+	var m=today.getMinutes()
+	var s=today.getSeconds()
+	m=checkTime(m)		// add a zero in front of numbers<10
+	s=checkTime(s)
+	document.getElementById("time").innerHTML=h+":"+m+":"+s
+	t=setTimeout('startTime()',500)
+	}
+	function checkTime(i)
+	{
+	if (i<10) 
+  	{i="0" + i}
+  	return i
+	}
+	</script>
+</head>
+<body onload=startTime();>
+	<div id="content">
+		<header>
+		    <h1>THE SUMMARY</h1>
+			<nav>
+			    <ul>
+				    <li id="current"><a href="summary.html" id="one1">ONE</a></li>
+				    <li><a href="关于div.html" id="two1">TWO</a></li>
+			    	<li><a href="几个原则.html" id="three1">THREE</a></li>
+			    	<li><a href="定位布局.html" id="four1">FOUR</a></li>
+			    	<li><a href="js相关.html" id="five1">FIVE</a></li>
+			    	<li><a href="HeadFirstWeb设计之前期制作1.html" id="six1">SIX</a></li>
+			    	<li><a href="HeadFirstWeb设计之重点祥记1.html" id="seven1">SEVEN</a></li>
+			    	<li><a href="html5的一些元素.html" id="eight1">EIGHT</a></li>
+			    	<li><a href="前端开发大主题.html" id="nine1">NINE</a></li>
+			    </ul>
+		    </nav>
+			<hr>
+	    </header>
+	    <div id="container">
+	    	<div id="left">
+			    <div id="two" class="text">
+			    	<h1>关于Div</h1>
+				    <hr>
+				    	<p>
+							如何并排显示多个div:
+							1.利用绝对定位方法，此时div块并不占用实际空间，可以做到&ltdiv style="position:relative;height:100px"&gt&ltdiv id="1" style="position:absolute;top:0;left:0;width:50%;height:100px"&gt&lt/div&gt&ltdiv id="2" style="position:absolute;top:0;left:50%;width:50%;height:100px"&gt&lt/div&gt&lt/div&gt 
+							2.利用float属性，也是div块不占用实际空间，可能覆盖掉其他块的内容。(float只能用于块级元素)可见<a href="http://www.w3school.com.cn/css/css_positioning_floating.asp">http://www.w3school.com.cn/css/css_positioning_floating.asp</a>
+							3.设置display:inline-block属性
+							4.margin属性设置为负值		
+						</p>
+				    <hr class="light">
+				    	<p>小技巧：最外层的div的边框设置一定的宽度和颜色，里面的padding就可以都设为0，同时还可以在里面设置padding，形成双边框的效果。
+				    	</p>
+				    	<p>在设计网页时，设置了div为自动高度或不给height值，当div设置背景时在IE6可以显示背景颜色，但是IE7,8却不显示。解决办法如下：1、把height:auto;改成height:100%;overflow:hidden;原理：IE6可以再不给高度的情况下自动识别div高度而IE7,8需要指定高度;如果上述方法不行还有一种办法2、在div的下面在加一个清除div&ltdiv style="clear:both"&gt&lt/div&gt原理：加一个清除div是为了让浏览器计算高度。
+				    	</p>
+				    <hr class="light">
+				    	<p>css中，元素会有外边距叠加的问题，行内元素上下边距不考虑，左右边距加起来即为两者间的距离；块元素则比较复杂，具体有三种情况。其一，第一个块元素边距为正，第二个块元素边距为负，两者就会发生叠加，即上下的距离为：正+负；其二，两个块元素都是正值也会发生叠加，即上下间的距离为：取大正；其三，父子关系的两个块元素间的叠加，若父元素没有任何边框或补白(padding)设置，则子元素的外边距代表整个块的外边距！总结：普通文档流中拥有块级布局属性的元素都会发生叠加问题，只有行内元素、浮动元素或定位元素之间的空白边是不会发生叠加的。
+				    	</p>
+				    <hr class="light">
+				    	<p>外边距设置中，margin可以设置负数属性，此时块将向相反的方向移动，甚至可以覆盖在负块或者其他元素的上方，达到破局的效果，有时会给页面文本以画龙点睛的效果。
+				    	</p>
+				    	<p>注意：在宽度高度确定时，同时使用上、右、下、左四个方向的距离，以top和left为准，right和bottom忽略。但是如果宽度高度没有设置，同时定义了上、右、下、左四个方向的距离就会出现bug，此时IE浏览器以left、top为准，宽度高度按内容自适应；而firefox则满足四个方向的距离，宽度高度根据父元素或根元素的大小自适应！
+				    	</p>
+				    <hr class="light">
+	    		</div>
+				</div>
+				<div id="right">
+						<div id="time"></div>
+						<p>Don't Worry,Be Happy</p>
+						<p>欢迎指导交流，共同学习</p>
+						<img src="yuanyuan.jpg">
+						<p>Tel:18729007922</p>
+						<p>Email:1070948611@qq.com</p>
+				</div>
+		</div>
+		<footer>
+			<div id="foot">HELLO WORLD</div>
+		</footer>
+		</div>	
+	</body>
+</html>
