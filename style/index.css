@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
 }
+/*
 @font-face{
   font-family: outerFont;
   src: url("../font/yan.ttf");
-}
+}*/
 .indexPage {
   height: 620px;
   color: #fff;
@@ -97,7 +98,8 @@ header nav ul li a:hover, header nav ul li a:active {
 }
 .main {
   padding: 70px 200px;
-  font-family: outerFont, serif;
+  font-family: serif;
+  font-weight: bolder;
 }
 hr {
   margin-top: 120px;
