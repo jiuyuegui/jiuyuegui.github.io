@@ -1,4 +1,5 @@
 window.onload = function() {  
+  // show();
   timeShow();
 
   //画布方法
@@ -50,45 +51,26 @@ window.onload = function() {
       return false;
     }
   }, false); 
-  loadFont('outerFont', document.querySelector('.main'));
 };
 //文章中图片的轮播
 function timeShow() {
-    var sImg = ['images/silence/1.gif', 'images/silence/2.jpg', 'images/silence/3.jpg', 'images/silence/4.jpg'];
-    var fImg = ['images/fashion/1.jpg', 'images/fashion/2.jpg', 'images/fashion/3.jpg'];
-    var rImg = ['images/rock/1.jpg', 'images/rock/2.jpg', 'images/rock/3.jpg'];
-    var cImg = ['images/classical/1.jpg', 'images/classical/2.jpg'];
-    var s = document.querySelector('#silence_img');
-    var f = document.querySelector('#fashion_img');
-    var r = document.querySelector('#rock_img');
-    var c = document.querySelector('#classical_img');
-    var rand1 = Math.floor(Math.random()*sImg.length);
-    var rand2 = Math.floor(Math.random()*fImg.length);
-    var rand3 = Math.floor(Math.random()*rImg.length);
-    var rand4 = Math.floor(Math.random()*cImg.length);        //若图片个数一样，则可只用一个rand2
+    var foodImg = ['image/food/2.jpg', 'image/food/4.jpg', 'image/food/5.jpg', 'image/food/6.jpg'];
+    var exerciseImg = ['image/exercise/1.jpg', 'image/exercise/2.jpg', 'image/exercise/3.jpg'];
+    var psychologyImg = ['image/psychology/1.jpg', 'image/psychology/2.jpg', 'image/psychology/4.jpg'];
+    var habitImg = ['image/habit/1.jpg', 'image/habit/2.jpg'];
+    var food = document.querySelector('#food_img');
+    var exercise = document.querySelector('#exercise_img');
+    var psychology = document.querySelector('#psychology_img');
+    var habit = document.querySelector('#habit_img');
+    var rand2 = Math.floor(Math.random()*foodImg.length);
+    var rand3 = Math.floor(Math.random()*exerciseImg.length);
+    var rand4 = Math.floor(Math.random()*psychologyImg.length);
+    var rand5 = Math.floor(Math.random()*habitImg.length);        //若图片个数一样，则可只用一个rand2
 
-    s.src = sImg[rand1];
-    f.src = fImg[rand2];
-    r.src = rImg[rand3];
-    c.src = cImg[rand4];
+    food.src = foodImg[rand2];
+    exercise.src = exerciseImg[rand3];
+    psychology.src = psychologyImg[rand4];
+    habit.src = habitImg[rand5];
 
     setTimeout('timeShow()', 3000);
   }
-//加载外部字体
-function loadFont(font, ele) {
-  var span = document.createElement('span');
-  span.innerHTML = 'gW@i#Q!T';
-  span.style.visibility = 'hidden';
-  span.style.fontSize = '500px';
-  span.style.fontFamily = font;
-  document.body.appendChild(span);
-  var width_now = span.offsetWidth;
-  var interval_check = setInterval(function() {
-    if(span.offsetWidth != width_now) {
-      clearInterval(interval_check);
-      ele.style.fontFamily = font;
-      document.body.removeChild(span);
-      span = null;
-    }
-  }, 50);
-}

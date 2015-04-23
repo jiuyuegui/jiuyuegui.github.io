@@ -1,0 +1,151 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	color: #131313;
+}
+div#content {
+	width: 75%;
+	margin: 60px auto;
+}
+div#content header h1 {
+	font-size: 4.3em;
+	color: #2b2b2b;
+	text-align: center;
+}
+header nav {
+	width: 100%;
+	margin: 20px 0px;
+	text-align: center;
+}
+nav ul {
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	*display: inline;/*IE7*/
+	margin: 0 5px 10px 0;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	background-color: red;
+}
+nav ul li a {	
+	padding: 3px 12px;
+	line-height: 100%;
+	border: white solid 1px;
+	color: #212121;
+	font-family: "ny-irvin-text","Times New Roman",Times,Georgia,serif;
+}
+nav ul li a:hover,nav ul li a:active {
+	border: #999 solid 1px;
+	background-color: white;
+}
+hr {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+div hr.light {
+	color: #bbb;
+}
+div#container {
+	display: table-row;
+}
+div#left {
+	width: 70%;
+	padding: 20px 15px;
+	display: table-cell;
+	border-right: 1px solid #bbb;
+}
+div#right {
+	display: table-cell;
+	width: 30%;
+	padding: 40px 55px;
+	font-family: "Microsoft YaHei UI";
+}
+div.text {
+	font-family: "Microsoft YaHei UI";
+	font-size: 16px;
+	margin: 5px 70px;
+}
+p {
+	margin: 35px auto;
+	text-align: left;
+	line-height: 1.8em;
+}
+div.text h1 {
+	font-size: 2em;
+	text-align: center;
+	color: #323232;
+	padding-bottom: 35px;
+	font-family: "Microsoft YaHei UI Light";
+}
+pre {
+	font-family: "Microsoft YaHei UI";
+}
+footer {
+	clear: both;
+	width: 100%;
+	margin-top: 25px; 
+	border-top: 1px solid gray;
+}
+#foot {
+	text-align: center;
+	width: 80%;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	margin: 15px auto;
+	border-bottom: 1px solid #aaa;
+	font-family: "Microsoft YaHei UI";
+}
+img {
+	width: 150px;
+	height: 200px;
+	border-radius: 90px;
+}
+@media screen and (max-width: 600px){
+	nav {
+		position: relative;
+		min-height: 40px; 
+	}
+	nav ul {
+		width: 140px;
+		padding: 10px 0;
+		top: 0px;
+		left: 0px;
+		border: 1px solid #aaa;
+		background: #fff url(icon-menu.png) no-repeat 15px 18px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgb(0,0,0,.3); 
+		position: absolute;
+	}
+	nav ul li {
+		display: none;
+		margin: 0px;
+	}
+	nav ul li a {
+		display: block;
+		padding: 5px 5px 5px 60px;
+	}
+	nav ul li#current {
+		display: block;
+	}
+	nav ul li#current a {
+		background: none;
+	}
+	nav ul:hover {
+		background-image: none;
+	}
+	nav ul:hover li {
+		display: block;
+		background: 0 0 5px;
+	}
+	nav ul:hover li a:hover {
+		background: url(icon-check.png) no-repeat 10px 7px;
+	}
+}
