@@ -1,128 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-en">
+<html lang="zh-CN">
 <head>
-  <!-- <link rel="music" href="images/glyphicons-19-note.png" type="image/png" /> -->
-	<title>pure and touched</title>
-	<meta charset = "utf-8" />
-	<link rel="stylesheet" href="css/index.css">
+  <meta charset="utf-8" />
+  <title>我是张媛媛</title>
+  <link rel="stylesheet" href="stylesheets/index.css" />
 </head>
 <body>
-	<div class = "indexPage">
-    <span>listen<img alt = "yuefu" src="images/glyphicons-18-music.png" />music</span>
-    <p class = "indexP">Find a good music to enjoy</p>
-    <div class="wrap">
-      <canvas width = "700" height = "460" id = "mycanvas">your browser doesn't support canvas tag.</canvas>
-    </div>
+  <div id="wrapper">
+    <header></header>
+    <section id="main">
+<!--       <section id="content">
+        我是主内容
+      </section>
+      <sidebar>
+        我是侧边栏
+      </sidebar> -->
+    </section>
+    <ul id="tech">
+      <li class="my-btn"><a href="http://github.com/jiuyuegui" target="_blank">Github</a></li>
+      <li class="my-btn">Blog</li>
+      <li class="my-btn"><a href="./stuff/healthy_life1/index.html">demo1</a></li>
+      <li class="my-btn"><a href="./stuff/healthy_life2/index.html">demo2</a></li>
+    </ul>
+    <img src="images/photo3.jpg" id="photo" />
+    <nav>
+      <ul>
+        <li data-section="learn">总结</li>
+        <!-- <li data-section="works">作品</li> -->
+        <!-- <li data-section="interest">兴趣</li> -->
+        <li data-section="about-me">关于我</li>
+      </ul>
+    </nav>
+    <section id="learn">
+      <iframe src="stuff/summary/summary.html"></iframe>
+    </section>
+    <sidebar class="learn">
+    </sidebar>
+    <section id="works">
+      我是作品
+    </section>  
+    <sidebar class="works">
+      <img src="" />
+      <p></p>
+    </sidebar>
+    <section id="interest">
+      兴趣
+    </section> 
+    <sidebar class="interest">
+    </sidebar>
+    <section id="about-me">
+      <iframe src="stuff/about-me/index.html"></iframe>
+    </section> 
+    <sidebar class="about-me">
+    </sidebar>
+    <footer>
+      <ul>contact me
+        <li>e-mail: 1070948611@qq.com</li>
+        <li>qq: 1070948611</li>
+      </ul>
+      <p>copyright &copy; 张媛媛</p>
+    </footer>
   </div>
-  <section>
-    <header>
-      <a id = "pic" href="find music.html">点我去搜歌~</a>
-      <nav>
-        <ul>
-          <li><a href = "#silence">安静</a></li>
-          <li><a href = "#fashion">流行</a></li>
-          <li><a href = "#rock">摇滚</a></li>
-          <li><a href = "#classical">古风</a></li>
-        </ul>
-      </nav>
-    </header>
-  </section>
-  <section class = "main">
-    <div>
-      <article id = "silence">
-        <div class = "navDiv">
-          <h1>静静地，过一天</h1>
-          <p>只剩下钢琴陪我谈了一天
-             睡著的大提琴 安静的旧旧的<br>
-             我想你已表现的 非常明白
-             我懂我也知道 你没有舍不得<br>
-             你说你也会难过我不相信
-             牵著你陪着我 也只是曾经<br>
-             希望他是真的比我还要爱你
-             我才会逼自己离开<br>
-             </p>
-          <p>你要我说多难堪 我根本不想分开
-             为什么还要我用微笑来带过<br>
-             我没有这种天份 包容你也接受他
-             不用担心的太多 我会一直好好过<br>
-             你已经远远离开 我也会慢慢走开
-             为什么我连分开都迁就着你<br>
-             我真的没有天份 安静的没这么快
-             我会学着放弃你 是因为我太爱你</p>
-        </div>
-        <aside><img id = "silence_img" alt="some silence" src="images/silence/1.gif"></aside>
-      </article>
-      <hr>
-      <article id = "fashion">
-        <div class = "navDiv">
-          <h1>一起来唱流行歌</h1>
-          <p>当我第一次知道要拍洗头水广告的时候
-             其实我是，是拒绝的<br>
-             我跟导演讲，我拒绝，因为
-             其实我，根本没有头，发<br>
-             导演跟我讲，拍完加特技
-             头发很黑，很亮，很柔<br>
-             加了一个月特效之后呢
-             头发 Duang~~~~~~<br>
-             </p>
-          <p>后来我经过也知道他们是
-             是假的，是化学成分的<br>
-             我现在呢，每天还在
-             加特技<br>
-             加了很多特技，头发
-             Duang~Duang~Duang~<br>
-             观众用完之后，不加特技
-             头发 都~没有</p>
-        </div>
-        <aside><img id = "fashion_img" alt="some fashion" src="images/fashion/1.jpg"></aside>
-      </article>
-      <hr>
-      <article id = "rock">
-        <div class = "navDiv">
-          <h1>Everybody say hi</h1>
-          <p>everything around should i stay were go<br>
-             baby can you fell my heart is true<br>
-             i never speaking again<br>
-             oh my baby please don't let me cry<br>
-             </p>
-          <p>oh my baby please don't let me cry<br>
-             everything around should i stay were go<br>
-             baby can you fell my heart is true<br>
-             i never speaking again
-             i never speaking again</p>
-        </div>
-        <aside><img id = "rock_img" alt="rock" src="images/rock/1.jpg"></aside>
-      </article>
-      <hr>
-      <article id = "classical">
-        <div class = "navDiv">
-          <h1>穿越到三生以前</h1>
-          <p>那离愁 深秋 再回首
-             离别恨 已过几秋<br>
-             上红楼 交杯酒 执子之手
-             紧握那颗相思豆<br>
-             心有千千结 不忍吐离别
-             只求能与你化茧成蝶<br>
-             相见难 这般愁断肠
-             天上人间 两茫茫<br>
-             </p>
-          <p>泪成霜 花残 独留暗想
-             对镜梳妆 泪千行<br>
-             此情成追忆 绵绵无绝期
-             若离别 此生无缘<br>
-             不求殿宁宏 不求衣锦荣
-             但求 朝朝暮暮生死同<br>
-             心有千千结 不忍吐离别
-             只求能与你化茧成蝶</p>
-        </div>
-        <aside><img id = "classical_img" alt="some classical" src="images/classical/1.jpg"></aside>
-      </article>
-    </div>
-  </section>
-  <footer>
-    &copy;2015 zhangyuanyuan Shaanxi Normal University&nbsp;&nbsp;灵感来自Blast Processor
-  </footer>
-
-  <script src="js/index.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
+
